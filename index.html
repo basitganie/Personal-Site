@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basit's Blogs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 id="site-title">My Blogging Site</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#logs">Logs</a></li>
+                    <li><a href="#documents">Documents</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="home" class="content-section active">
+            <h2>Welcome</h2>
+            <p>This is my personal blogging site for sharing views and documents.</p>
+            <div class="recent-updates">
+                <h3>Recent Updates</h3>
+                <div id="recent-posts" class="update-list">
+                    <!-- Dynamically loaded from JS -->
+                </div>
+            </div>
+        </section>
+
+        <section id="logs" class="content-section">
+            <h2>My Logs</h2>
+            <div class="filter-controls">
+                <input type="text" id="log-search" placeholder="Search logs...">
+                <select id="log-filter">
+                    <option value="all">All Categories</option>
+                    <option value="work">Work</option>
+                    <option value="personal">Personal</option>
+                    <option value="projects">Projects</option>
+                </select>
+            </div>
+            <div id="log-entries" class="log-list">
+                <!-- Dynamically loaded from JS -->
+            </div>
+        </section>
+
+        <section id="documents" class="content-section">
+            <h2>My Documents</h2>
+            <div class="filter-controls">
+                <input type="text" id="doc-search" placeholder="Search documents...">
+                <select id="doc-filter">
+                    <option value="all">All Types</option>
+                    <option value="pdf">PDF</option>
+                    <option value="doc">Word</option>
+                    <option value="code">Code</option>
+                </select>
+            </div>
+            <div id="document-list" class="document-grid">
+                <!-- Dynamically loaded from JS -->
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I love to document my journey and share resources.</p>
+                    <p>This website serves as my personal content sharing platform.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/basitganie" class="social-links"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.instagram.com/_b.g_02/" class="social-links"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="basitahmed1412@gmail.com" class="social-links"><i class="fas fa-envelope"></i> Email</a>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/300" alt="Profile Image" id="profile-image">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Basit Ahmad Ganie. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
