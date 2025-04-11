@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Typewriter Effect - Islamic Status</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(ellipse at center, #0f0f0f 0%, #000000 100%);
+      color: #f1f1f1;
+      font-family: 'Roboto Mono', monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 100%;
+      padding: 30px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+
+    #typewriter {
+      white-space: pre-line;
+      overflow: hidden;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #f5f5f5;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      position: relative;
+    }
+
+    #typewriter::after {
+      content: '|';
+      position: absolute;
+      right: 0;
+      animation: blink 0.7s infinite;
+      color: #fff;
+    }
+
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
+    }
+
+    /* Optional flicker effect */
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      45% { opacity: 0.85; }
+      50% { opacity: 0.65; }
+      55% { opacity: 0.9; }
+    }
+
+    #typewriter span {
+      animation: flicker 3s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="typewriter"><span></span></div>
+  </div>
+
+  <script>
+    const text = `As a Muslim, nothing hurts more than watching the land where Islam was born—the land that cradled the Prophet’s (PBUH) footsteps—turn its back on the cries of the Ummah.
+
+Saudi Arabia, the so-called guardian of the two holiest sites in Islam, has become a symbol of silence in the face of oppression. They open their arms to oil deals and handshakes with occupiers, but turn their backs on the children of Gaza, the voices of Yemen, the cries of Kashmir, the chained souls of East Turkestan.
+
+Mecca and Medina, once centers of justice and unity, now sit wrapped in luxury malls, guarded by thrones, while the fire of the Ummah burns.
+
+Where is the guardianship? Where is the courage that once walked barefoot on the sands of Hijaz, that stood before emperors and declared truth?
+
+They preach peace but ally with war. They speak of unity but sell it for survival. And worst of all, they invoke Islam to justify their silence.
+
+But Islam doesn’t live in palaces.
+Islam lives in the streets of Gaza.
+In the hands scraping rubble for bread.
+In the voices that rise even as bombs fall.
+In the steadfastness of a mother burying her child and whispering “HasbunAllah.”
+
+The soul of this Deen was never meant to serve kings. It was meant to liberate the oppressed.
+
+And that spirit—it’s still alive. Not in the rulers, but in the people.
+Not in the silence of the powerful, but in the cries of the sincere.
+
+Ya Allah, return our dignity. Awaken our leaders or replace them. Unite the hearts of this Ummah, not through politics—but through justice, truth, and courage.`;
+
+    const element = document.querySelector('#typewriter span');
+    let i = 0;
+
+    function type() {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 30); // Typing speed
+      }
+    }
+
+    type();
+  </script>
+</body>
+</html>
